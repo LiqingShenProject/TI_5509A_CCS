@@ -1,3 +1,6 @@
 # TI_5509A_CCS
-This example uses C5000 Chip support libary to realize an I2C communication with pheripheral. The C5000 CSL provides all the APIs in C to c utilize pheripheral of C5000 series of TI DSPs. It allows programmer focus more on the DSP algorithm development in C.
-The IDE is Code Composer Stuido (CCS) from TI
+This example utilize the DSP core of TMS320VC5509A to generate error corrected xz_x, xz_y.
+Due to the non-linearity of Lens, the xy point on the focal plane suffered pin-cushion and barrel distortion
+A 128X128 error correction table is generated from FPGA and sent to DSP via CE_0# external memory interface
+The original x,y line buffer is also filled up by FPGA via CE_0# external memory interface
+The example here use a linear interpolation method the error correct the original x,y.
